@@ -1,0 +1,97 @@
+\documentclass[10pt,twocolumn]{article} 
+
+% required packages for Oxy Comps style
+\usepackage{oxycomps} % the main oxycomps style file
+\usepackage{times} % use Times as the default font
+\usepackage[style=numeric,sorting=nyt]{biblatex} % format the bibliography nicely
+
+\usepackage{amsfonts} % provides many math symbols/fonts
+\usepackage{listings} % provides the lstlisting environment
+\usepackage{amssymb} % provides many math symbols/fonts
+\usepackage{graphicx} % allows insertion of grpahics
+\usepackage{hyperref} % creates links within the page and to URLs
+\usepackage{url} % formats URLs properly
+\usepackage{verbatim} % provides the comment environment
+\usepackage{xpatch} % used to patch \textcite
+
+\bibliography{references}
+\DeclareNameAlias{default}{last-first}
+
+\xpatchbibmacro{textcite}
+  {\printnames{labelname}}
+  {\printnames{labelname} (\printfield{year})}
+  {}
+  {}
+
+\pdfinfo{
+    /Title (The Ethics of a Drone-Flying Game)
+    /Author (Joshua Pulido)
+}
+
+\title{The Ethics of a Drone-Flying Game}
+
+\author{Joshua Pulido}
+\affiliation{Occidental College}
+\email{jpulido@oxy.edu}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+In an effort to combine the joys of flying a drone with the immersive experiences that virtual reality (VR) and augmented reality (AR) games allow for, I aim to develop a video game that combines the two technologies. More specifically, my goal is to create a prototype using an Oculus Quest 2 and Tello drone, with the hope that one day such a game can become a commercially viable product. However, there are a number of ethical considerations that can arise with each individual part of this product, which should be considered. While none of these necessarily mean that such a game should not exist, they must be taken into account during the game's development, so that their effects can be mitigated wherever possible. This paper outlines some of the concerns that arise, starting with virtual reality, then discussing the complications of flying a real drone as part of a video game, and finally discusses the project as a whole within the broader context of the technology and video game industries.
+
+\section{Using Virtual Reality}
+
+As a relatively new field, there is a significant amount of research being done currently about the effects that virtual reality can have on an individual. Although fictional stories like those presented in the film \emph{Ready Player One} are considered by many to be over exaggerations, research has shown that virtual reality has the capability of changing our perception of the real world. In the context of an AR drone-flight game, some of the issues that arise include VR's persuasive tendencies and the possibility of social isolation.
+\subsection{Persuasion and VR}
+The primary goal of virtual reality is to make a game feel as "real" as possible, through  immersion and, where possible, realistic graphics that either emulate the real world, or try to create a fantasy that is conceivably real. In order to accomplish this, it is necessary to persuade the user and convince them of this realism; therefore, it could be said that VR is intentionally persuasive in nature. There can be problems with this when the persuasion exits the virtual space and enters the real world. This is not necessarily a bad thing; for example, one study used VR technology to teach people proper fire safety techniques through a series of positive and negative reinforcement\cite{PersuasiveVR}. However, within the context of a video game, there is the potential for negative effects to happen depending on the genre.
+
+The current plan for the drone AR game is to use a simplified flight control scheme, using a traditional game controller in place of the standard drone controllers. For this reason, users should not make the assumption that they are able to fly any drone after playing the game. Since this is a video game, there will be some "win condition", or goal, for the player to achieve, which would provide the player with positive reinforcement upon completion. At the same time, the negative reinforcement given when the player makes mistakes might not necessarily correlate to the proper flight of drones. For example, if the game involved dodging bullets, then it could reward the player for making sporadic movements that would not be recommended under normal flight conditions. Even in situations where negative reinforcement is given for poor flight tendencies, this would not necessarily lead to the ability to properly fly a real drone.  
+
+Thus, there is a great risk of a player, inspired by their ability in game, acquiring a proper drone and attempting to fly it without proper training. Inevitably, this might lead to a number of disasters, and in the worst case could bring physical harm to the player or other individuals around them. Regardless of who's fault such an incident might be, the game would have played a significant role, and therefore some action should be taken within the game to prevent these scenarios. One solution to the problem could be requiring players to have prior experience in flying drones; however, this would cut off a significant portion, if not the majority, of players who would find a game like this enjoyable. Perhaps a better solution would be to provide a clear warning to the player that drone flight in the game is a simplified version of the real controls, and proper training should be undertaken before attempting to use a normal drone controller. There would have to be a balance here; providing a warning in small print at the start of the game probably would not suffice, but making it very obvious would likely detract from the user experience. Somehow, it would have to get the point across while not getting in the way of gameplay. Nevertheless, there is more than likely an elegant solution to accomplish this, and hopefully avoid some of the dangerous situations outlined above.
+
+\subsection{Social Isolation}
+
+As with any game, the main goal of virtual reality games is to keep the player engaged and entertained for extended periods of time. By design, many of these games are single player experiences, as the VR space has simply not yet reached the point where multiplayer games are as readily available as they are on other gaming platforms. Therefore, the ability of VR games to keep a player distracted for a long time could add to the social isolation that many experience today. Research has already shown that video game addiction trends to coincide with lesser social skills\cite{SocialSkillsVG}, and some speculate that the introduction of virtual reality, and its world-bending properties, can have a compounding effect on this. However, Paige Dansinger, founding director of Better World Museum and Horizon Art Museum, provides a different take on the matter. She argues that "...social XR was the best – if not the only – tool that was needed to have a strong healthy museum community. The trust, relationships and presence are all there"\cite{MuseumVR}. The same can be said for gaming, where such games as VRChat have skyrocketed in popularity due to the social and community aspects that they have. 
+
+Within the context of a drone-flight augmented reality game, it is possible that a player's social life could be affected. Due to the dangerous situations that could arise from flying multiple drones within close proximity to each other, such a game is inherently required to be a single player experience. Nevertheless, it could be argued that such a worry is not as applicable in this case. After all, most games are able to be played for as long as desired, since the user can plug their computer and headset to the charger and continue playing beyond the normal battery life. However, with this particular case, the drone has a finite (and usually short) flight time before having to be recharged, thereby limiting the playtime. Additionally, drone flight is commonly experienced in communities, and the same can be true of this game. Although multiplayer should not be a feature, the game can still be used in community settings, where experienced pilots can take turns enjoying the game. There are many ways that such an issue can be dealt with, but certainly it must be said that it is very possible some users do experience the negative effects.
+
+\section{Using A Drone}
+
+As partially outlined above, using a real drone in a video game has the possibility of leading to many issues. The introduction of a tangible object in gameplay can lead to a variety of issues had on the real world surrounding the player. Within the field of drone flight, there are already a number of ethical concerns that have been raised in recent years, including the dangers associated with inexperienced pilots flying drones and concerns surrounding privacy and data collection with drones. Additionally, with the added layer of a video game through VR, there is the concern of whether or not it could be considered "distracted driving", putting the project in a legal gray area.
+
+\subsection{Inexperienced Pilots}
+One part of the game's goal is to introduce drone flight, at the most basic level, to new individuals who may be interested (although the game is not a learning tool, as mentioned prior). Therefore, it is reasonable to expect that many new players, if not the majority of them, will be flying a drone for the first time, and may not be familiar with the rules that have been put in place by the Federal Aviation Administration (FAA) concerning unmanned aerial systems (UAS), also known as drones. Many restrictions exist concerning where flight is and is not allowed; for example, flight in restricted airspace and near airports is explicitly prohibited\cite{DronesFAA}. However, it is not necessarily common knowledge for the average user, and thus must somehow be communicated to them through the game.
+
+One of the largest fears with inexperienced pilots flying drones is their ability to hurt bystanders. Notably, the FAA does not prohibit the flight of drones around other people, but whether or not this game should be played around people who are unaware could be of concern. Even in the situation where gameplay is isolated, there remains the issue of the player crashing the drone into themselves or damaging property. This is an unfortunate byproduct of the novelty that including a real drone as part of the game, as the same could be said of racing drones in first person view (FPV) or even flying them for leisure. To solve this problem, it could be possible to implement a system which stops the drone from flying if it ever gets too close; however, this could prove to be difficult, if not impossible, depending on the number of sensors present on the drone. The Tello drone, which is being used in the development of the prototype, contains no sensors that could be useful for this, so another solution must be found. It could be possible to use the camera alongside image detection in place of a sensor, but this would require significantly more processing power than may be available while also running a VR game. Moreover, it also presents certain issues around security, and privacy.
+
+
+
+\subsection{Drone Camera + Data Collection}
+
+One of the leading arguments against the flight of drones is the privacy concerns that arise due to their aerial mobility and ability to navigate in ways that were previously impractical, if not impossible, for the average person. Many private citizens have expressed their fears over drones being used by individuals, such as their neighbors, to enter their properties and take photographs are stream live footage of their own homes. While this is a very important issue that should be addressed in the field as a whole, for this specific game the limited range and presence of the HUD make it sub-optimal for such use. Nevertheless, it is a real issue, and warnings should be placed that notify the player of the illegality of using the drone in such ways.
+
+Another issue with privacy surrounds the use of data collected by the game, which would be used to enhance the gameplay experience in some ways. One feature that could be implemented in the final product is using sensors to scan the surrounding environment of the room prior to starting the game, and using this data to construct a game level that fits within the spatial constraints at any given place. The data would only be used immediately as a parameter to the algorithm; however, there would rightfully be privacy concerns about a 3rd party collecting information of the layout of every player's room. These concerns are amplified by other possible features, such as using the camera to detect people and other obstacles to prevent collisions. All of this image data is being processed by the computer, and it could be argued that bystanders are having their appearance processed by an algorithm without them having given explicit consent. \citeauthor{CameraPrivacy}\cite{CameraPrivacy} discuss the possibility of image recognition software complying to laws concerning privacy, and notes that it is possible to develop system that is fully compliant with EU law (and most likely US law as well). Regardless, such a system is impractical to develop for a video game. After all, the image recognition used by the game would be simple, only used for detecting that an object is nearby. Instead, a better solution might be to promise the users that none of the collected data is being stored, and to follow through on this. In order for the algorithms used by the game to function, they only need the data for a brief moment of time, after which it can promptly be deleted. Hopefully, providing a terms of use which explicitly states the way that data will be used would be sufficient to solve the privacy concerns, but it might be worth looking into alternative ways of object avoidance to avoid the issue altogether.
+
+\subsection{Distracted Driving}
+
+Distracted driving is an important issue within policy, particularly since it claimed the lives of over 3000 people in 2020 alone\cite{DistractedDrivingNHTSA}. As a result, the United States and many other countries have implemented laws which make distracted driving, including eating or using a mobile device, a serious offense. Notably, these laws are targeted towards automobiles and other land vehicles, as they are the most common vehicle that most people drive, but drones could theoretically be included as another 'driveable' vehicle. Thus arise two questions: "Is playing a video game while flying a drone considered distracted driving?" and, if so, "Should such a game be allowed on the market?".
+
+There exists no current legislation around the flight of drones with regards to distractions, but it should nevertheless be approached with caution as there is much room for such laws to be implemented. As mentioned prior in the paper, the top priority is the safety of all individuals in the immediate vicinity of the drone, and as such the game must be developed in a way that emphasizes this. Perhaps this involves a simple game without too many moving parts, or an intricate system to help the player be aware of the surroundings. Regardless, it is important that the player is not too focused on playing a game, to the point that they forget about reality. Another important mechanism will be the requirement of a second person observing the drone flight. It is already a legal requirement to have someone observing when a drone is flown using an FPV headset, so this is not an additional burden being thrown onto the player. To further improve the safety capabilities, there will likely be a "safety lock" of sorts implemented, where the accompanying person can force the drone to stop and land (if it is safe) at any time, most likely when there is a source of danger that the player is unable to see.
+
+
+\section{Other Issues}
+The majority of the ethical concerns related to the drone-flight AR game are directly related to one of the two major components of the game as described above. However, the game does not exist in an isolated environment, and therefore is subject to the same ethical concerns as all of technology. Although there are many, this article focuses on the environmental impact that releasing this game commercially could have.
+
+\subsection{Environmental Concerns}
+With the exponential growth of the consumer electronics sector over the past few decades, one of the largest concerns that has arisen, especially in recent years, has been surrounding electronic waste (e-waste) and its environmental impact. Within the gaming industry alone, 34 terawatt-hours of energy are used annually across the globe, with this number expected to increase as gaming becomes a worldwide phenomenon \cite{GamingEWaste}. Further, the quick improvements in technology contribute to constant releases, and even re-releases, of consoles, along with other hardware has led to lots of waste, including the 700,000 unsold Atari cartridges that were just buried in a New Mexico desert \cite{GamingEWaste}. Thus, any video game must factor the environmental impact that they can have into the development and production cycles, especially if there are hardware components. 
+
+For this specific video game, there is a unique challenge in that it can not be assumed that the user will have the correct drone, or a drone at all. Thus, the most obvious solution is to provide a drone as part of a package with the game. While it could also be possible to use a commercial drone already in the market, and thereby decrease the environmental impact due to production, this would lessen the user experience as the user would be required to purchase a separate product in order to play the game. Thus, there are multiple tradeoffs, and unfortunately there is no real good solution to this issue. It might be possible to offset the environmental impact by promoting proper recycling of products within the game; however, the creation of this game would inevitably lead to a negative impact on the environment, much like every other game in the market.
+
+\section{Conclusion}
+With the merging of multiple different technology fields in order to create a video game, a number of ethical issues unique to each field arise. Moreover, such a project would not be exempt to the common issues that plague the industry as a whole. These issues are important, and need to be addressed in some capacity. Although many are not able to be fully addressed, it is possible to take them into account during the development process and mitigate their effects. Indeed, they should not impede the production of this game, or most others, but instead should be taken as opportunities to increase awareness and hopefully push towards bringing an end to the greater impact they have.
+
+\printbibliography 
+
+\end{document}
